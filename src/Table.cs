@@ -11,10 +11,10 @@ namespace Ucu.Poo.Restaurant
         public bool IsOccupied { get; set; }
         private List<Dish> order = new List<Dish>();
 
-        public Table(int number, bool isOccupied)
+        public Table(int number)
         {
             Number = number;
-            IsOccupied = isOccupied;
+            IsOccupied = false;
             order = new List<Dish>();
         }
 
@@ -29,7 +29,7 @@ namespace Ucu.Poo.Restaurant
             order.Clear();
         }
 
-        public void AddOrder(Dish dish)
+        public void AddToOrder(Dish dish)
         {
             order.Add(dish);
         }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Ucu.Poo.Restaurant
@@ -8,5 +9,29 @@ namespace Ucu.Poo.Restaurant
     public class Waiter
     {
         private List<Table> assignedTables = new List<Table>();
+        public string Name { get; }
+        public Waiter(string name)
+        {
+            this.Name = name;
+        }
+        public List<Table> GetTables()
+        {
+            return assignedTables;
+        }
+        public void AssignTable(Table table)
+        {
+            assignedTables.Add(table);
+        }
+        public void TakeOrder(Table table, Dish dish)
+        {
+            if (assignedTables.Contains(table))
+            {
+                table.AddToOrder(dish);
+            }
+            else
+            {
+                Console.WriteLine($"La mesa {table} no esta asignada al mozo {this.Name}");
+            }
+        }
     }
 }

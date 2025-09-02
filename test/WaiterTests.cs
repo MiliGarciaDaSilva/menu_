@@ -21,7 +21,7 @@ namespace Ucu.Poo.Restaurant.Tests
             Table table = new Table(1);
             waiter.AssignTable(table);
             Dish dish = new Dish("Salad", 5.99, true);
-            table.Ocupy();
+            table.Occupy();
 
             waiter.TakeOrder(table, dish);
 
