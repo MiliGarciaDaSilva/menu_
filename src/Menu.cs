@@ -20,18 +20,18 @@ namespace Ucu.Poo.Restaurant
 
         public void AddDish(Dish dish)
         {
-            dishes.Add(dish);
+            this.dishes.Add(dish);
         }
         public void RemoveDish(Dish dish)
         {
-            dishes.Remove(dish);
+            this.dishes.Remove(dish);
         }
 
         public Dish GetDishByName(string name)
         {
             foreach (var dish in dishes)
             {
-                if (dish.Name.Equals(name))
+                if (dish.Name == name)
                 {
                     return dish;
                 }

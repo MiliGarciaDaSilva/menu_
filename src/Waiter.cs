@@ -20,7 +20,7 @@ namespace Ucu.Poo.Restaurant
         }
         public void AssignTable(Table table)
         {
-            assignedTables.Add(table);
+            this.assignedTables.Add(table);
         }
         public void TakeOrder(Table table, Dish dish)
         {

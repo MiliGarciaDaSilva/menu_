@@ -13,25 +13,25 @@ namespace Ucu.Poo.Restaurant
 
         public Table(int number)
         {
-            Number = number;
-            IsOccupied = false;
-            order = new List<Dish>();
+            this.Number = number;
+            this.IsOccupied = false;
+            this.order = new List<Dish>();
         }
 
         public void Occupy()
         {
-            IsOccupied = true;
+            this.IsOccupied = true;
         }
 
         public void Free()
         {
-            IsOccupied = false;
-            order.Clear();
+            this.IsOccupied = false;
+            this.order.Clear();
         }
 
         public void AddToOrder(Dish dish)
         {
-            order.Add(dish);
+            this.order.Add(dish);
         }
         
         public bool HasOrders()
