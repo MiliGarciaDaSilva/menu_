@@ -38,5 +38,15 @@ namespace Ucu.Poo.Restaurant
         {
             return this.order.Count > 0;
         }
+
+        public double GetTotal()
+        {
+            double precioTotal = 0;
+            foreach (var dish in order)
+            {
+                precioTotal += dish.Price;
+            }
+            return precioTotal;
+        }
     }
 }

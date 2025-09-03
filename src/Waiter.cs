@@ -22,11 +22,19 @@ namespace Ucu.Poo.Restaurant
         {
             this.assignedTables.Add(table);
         }
-        public void TakeOrder(Table table, Dish dish)
+        public void TakeOrder(Table table, Dish dish, bool paraLlevar)
         {
             if (assignedTables.Contains(table))
             {
-                table.AddToOrder(dish);
+                if (paraLlevar)
+                {
+                    table.AddToOrder(dish);    
+                }
+                else
+                {
+                    table.AddToOrder(dish);
+                    table.Occupy();   
+                }
             }
             else
             {
